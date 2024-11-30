@@ -630,6 +630,10 @@ body {
         flex: none;
         margin: 0 auto 20px;
     }
+        }
+    .product{
+        width:65%
+    }
 }
 
 
