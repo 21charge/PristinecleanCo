@@ -99,7 +99,7 @@ header nav ul li a {
 
 /* Contact Form Styling */
 #contact-form {
-    width: 55%;
+    width: 75%;
     background-color: #ffffff;
     padding: 40px;
     border-radius: 12px;
@@ -140,6 +140,14 @@ header nav ul li a {
     min-height: 140px;
 }
 
+.button-container{
+        display: flex;
+        justify-content: center; /* Center the buttons horizontally */
+        gap: 20px; /* Add space between the buttons */
+        margin-top: 20px; /* Add some space above the buttons */
+    }
+
+
 #contact-form button {
     width: 100%;
     padding: 14px;
@@ -154,9 +162,24 @@ header nav ul li a {
     text-transform: uppercase;
 }
 
+.contactformbutton{
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background-color: #ff9478;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+}
+
+
+
 #contact-form button:hover {
     background-color: #e57a64;
-    box-shadow: 0 6px 18px rgba(255, 148, 120, 0.3);
+    box-shadow: 0 4px 12px rgba(255, 148, 120, 0.3);
 }
 
 
@@ -347,7 +370,6 @@ footer {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 80%
 }
 
 #products h2 {
@@ -373,6 +395,7 @@ footer {
     border-radius: 8px;
     padding: 20px;
     width: 45%;
+    max-width: 320px;
     min-height: 450px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -446,8 +469,10 @@ footer {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    width: 300px;
+    width: 500px;
     text-align: center;
+    justify-content: center;
+    justify-items: center;
 }
 
 /* Product Image Styling */
@@ -555,6 +580,8 @@ footer {
     cursor: not-allowed;
 }
 
+
+
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
     #cart {
@@ -630,7 +657,6 @@ body {
         flex: none;
         margin: 0 auto 20px;
     }
-        }
     .product{
         width:65%
     }
