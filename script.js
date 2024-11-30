@@ -112,4 +112,77 @@ document.getElementById('contact-form').addEventListener('submit', (e) => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const cartButton = document.getElementById('cart-button');
+    const cartDropdown = document.getElementById('cart-dropdown');
+    const cartItems = document.getElementById('cart-items');
+    const cartCount = document.getElementById('cart-count');
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+    let cart = [];
+
+    // Show or hide cart dropdown
+    cartButton.addEventListener('click', function (event) {
+        cartDropdown.classList.toggle('hidden');
+        event.stopPropagation();
+    });
+
+    // Close cart when clicking outside
+    document.addEventListener('click', function () {
+        cartDropdown.classList.add('hidden');
+    });
+
+    cartDropdown.addEventListener('click', function (event) {
+        event.stopPropagation();
+    });
+
+    // Add to cart event
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const productName = this.getAttribute('data-product');
+            const productPrice = this.getAttribute('data-price');
+
+            const existingItem = cart.find(item => item.name === productName);
+
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push({
+                    name: productName,
+                    price: productPrice,
+                    quantity: 1
+                });
+            }
+            updateCartUI();
+        });
+    });
+
+    // Update cart UI
+    function updateCartUI() {
+        cartItems.innerHTML = '';
+        cartCount.textContent = cart.reduce((total, item) => total + item.quantity, 0);
+
+        if (cart.length === 0) {
+            cartItems.innerHTML = '<li>Cart is empty</li>';
+        } else {
+            cart.forEach((item, index) => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `
+                    ${item.name} (x${item.quantity}) - R${item.price * item.quantity}
+                    <button class="remove-item" data-index="${index}">Remove</button>
+                `;
+                cartItems.appendChild(listItem);
+            });
+
+            // Remove item functionality
+            document.querySelectorAll('.remove-item').forEach(button => {
+                button.addEventListener('click', function () {
+                    const index = this.getAttribute('data-index');
+                    cart.splice(index, 1);
+                    updateCartUI();
+                });
+            });
+        }
+    }
+});
 
