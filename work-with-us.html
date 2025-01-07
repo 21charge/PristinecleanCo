@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact Us - LucibStudio</title>
+</head>
+<body>
+    <div>
+        <header class="mobile-header">
+            <div class="top-banner">
+                <a href="#" class="top-banner-link">
+                    <span class="new">NEW</span>
+                    <span class="main-text">Get a Free Personalized Website for Your Business</span>
+                    <span class="arrow">&rarr;</span>
+                </a>
+            </div>
+            <br>
+    
+            <div class="mobile-nav">
+                <ul class="mobile-menu">
+                    <li><a href="index.html"><strong>Home</strong></a></li>
+                    <li><a href="services.html"><strong>Services</strong></a></li>
+                    <li><a href="about-us.html"><strong>About Us</strong></a></li>
+                    <li><a href="education.html"><strong>Education</strong></a></li>
+                    <li><a href="work-with-us.html"><strong>Work With Us</strong></a></li>
+                
+                </ul>
+    
+            </div>    
+        </header>
+        <br>
+
+        <main class="content">
+            <br>
+            <h2>Contact Us</h2>
+            <p>If you have any questions, inquiries, or would like to discuss a project, please don't hesitate to reach out. We're here to help you bring your ideas to life!</p>
+
+            <section class="contact-form-section">
+                <h3>Get in Touch</h3>
+                <form action="/submit" method="POST" class="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
+
+                    <button type="submit" class="submitbutton">Send Message</button>
+                </form>
+                <br>
+            </section>
+        </main>
+        <br>
+        <footer>
+            <p>&copy; 2024 LucibStudio. All Rights Reserved. <a href="privacy-policy.html">Privacy Policy</a></p>
+        </footer>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="func.js"></script>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,254 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    color: #ddd;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+}
+
+.hardline{
+    color: #eeeeee;
+}
+
+/* Top Banner */
+.top-banner {
+    text-align: center;
+    background-color: #FFD700;
+    padding: 10px 15px;
+    color: #222;
+}
+
+.top-banner-link {
+    text-decoration: none;
+    color: #222;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
+.new {
+    background: #333;
+    color: #FFD700;
+    padding: 2px 5px;
+    margin-right: 5px;
+}
+
+
+
+/* Navigation */
+
+
+
+
+.mobile-nav {
+    height: 30px;
+    margin: 0,0,0,0;
+    background-color: #333;
+    padding: 10px 0;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    width: 99vw;
+}
+.mobile-menu{
+    align-self: center;
+    list-style: none;
+    width: 35vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+.content h1{
+    font-size: 3rem;
+}
+
+.mobile-menu li {
+    margin: 10px 0;
+}
+
+.mobile-menu a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+/* Block and Content Wrapper */
+.block {
+    padding: 5vh 10vw;
+    background-color: #1f1f1f; /* Slightly lighter for contrast */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.content {
+    background-color: #333;
+    padding: 3vw;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Service Cards */
+.cards {
+    background-color: #1f1f1f; /* Card background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Section Titles */
+.cards h3 {
+    font-size: 1.8rem;
+    color: #FFD700; /* Vibrant Coral */
+    margin-bottom: 10px;
+}
+
+.cards h4 {
+    font-size: 1.4rem;
+    color: #d4af37; /* Golden Yellow */
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.cards p {
+    color: #eeeeee;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Links */
+.cards a {
+    color: #30475e; /* Muted Blue-Gray */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.cards a:hover {
+    color: #FFD700; /* Vibrant Coral */
+    text-decoration: underline;
+}
+
+/* Horizontal Rule */
+hr {
+    border: none;
+    border-top: 1px solid #FFD700;
+    margin: 20px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #141414;
+    color: #eeeeee;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid #30475e;
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #FFD700; /* Golden Yellow */
+    text-decoration: underline;
+}
+
+/* For screens smaller than or equal to 500px */
+@media (max-width: 500px) {
+
+    /* Base Styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #222;
+        color: #ddd;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+    }
+
+    /* Top Banner */
+    .top-banner {
+        text-align: center;
+        background-color: #FFD700;
+        padding: 10px 15px;
+        color: #222;
+    }
+
+    .top-banner-link {
+        text-decoration: none;
+        color: #222;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .new {
+        background: #333;
+        color: #FFD700;
+        padding: 2px 5px;
+        margin-right: 5px;
+    }
+
+    /* Navigation */
+    .mobile-nav {
+        color: #ccc;
+        background-color: #222;
+        height: 150px;
+    }
+
+    /* Hide the menu by default (on mobile) */
+    .mobile-menu {
+        display: block;
+        justify-self: center;
+        width: 75vw;
+        padding: 0;
+        justify-content: space-between;
+        list-style: none;
+        text-align: center;
+
+    }
+
+    /* Make the mobile menu visible when it has the 'open' class */
+  
+
+    /* Menu items */
+    .mobile-menu li {
+        margin: 10px 0;
+    }
+
+    .mobile-menu a {
+        color: #FFD700;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .cards{
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
