@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work in Progress</title>
+    <link rel="icon" href="FreeSample-Vectorizer-io-WhatsApp Image 2025-03-01 at 18.29.24_65afe5eb.png" type="image/png">
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .top {
+            height: 50%;
+            background: #FFD700;
+            display: flex;
+            align-items: flex-start; /* Align content at the top to create space for logo */
+            justify-content: center;
+            padding-top: 20px; /* Adjust space for logo */
+        }
+        .bottom {
+            height: 50%;
+            background: #1a1a1a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 10px; /* Ensure a bit of padding if needed */
+        }
+        .container {
+            align-self: center;
+            text-align: center;
+        }
+        .countdown {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .email {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .lottie-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50%; /* Center the animation vertically */
+        }
+    </style>
+</head>
+<body>
+    <div class="bottom">
+        <div class="lottie-container">
+            <dotlottie-player src="https://lottie.host/aac11ebf-f445-4958-8fce-45e1adad156b/Aa6gLo6qlo.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
+        </div>
+    </div>
+    <div class="top">
+        <div class="container">
+            <h1>Work in Progress</h1>
+            <p class="email">Get a Free Website: <strong>your@email.com</strong></p>
+            <p class="countdown" id="countdown">Offer Ends In: --:--:--</p>
+        </div>
+    </div>
+    <script>
+        function updateCountdown() {
+            const endDate = new Date('2025-03-06T00:00:00').getTime();
+            setInterval(() => {
+                const now = new Date().getTime();
+                const distance = endDate - now;
+                if (distance < 0) {
+                    document.getElementById("countdown").innerHTML = "Offer Expired!";
+                    return;
+                }
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                document.getElementById("countdown").innerHTML = `Offer Ends In: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+            }, 1000);
+        }
+        updateCountdown();
+    </script>
+</body>
+</html>
